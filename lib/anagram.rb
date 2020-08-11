@@ -6,20 +6,19 @@ class Anagram
   end
 
   def match(possible_matches)
-    # split @word into letters
     matches = []
-    # split each word into letters
+    # split @word into letters
     word_letters = @word.split
     # iterate over possible matches
     possible_matches.each do |word|
+      # split each word into letters
+      # sort letters
+      # see if match
       if word.split.sort == word_letters
+        # if match, add to "matches" array
         word << matches
       end
     end
-    # sort letters
-    # see if match
-    # if yes, add to "matches" array
-    # if no, move on to next word
     # return matches array
     matches
   end

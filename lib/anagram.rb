@@ -10,14 +10,14 @@ class Anagram
   def match(possible_matches)
     matches = []
     # split @word into letters
-    word_letters = @word.split
+    word_letters = @word.split("")
     binding.pry
     # iterate over possible matches
     possible_matches.each do |word|
       # split each word into letters
       # sort letters
       # see if match
-      if word.split.sort == word_letters
+      if word.split("").sort == word_letters
         # if match, add to "matches" array
         word << matches
       end

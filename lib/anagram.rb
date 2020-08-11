@@ -1,3 +1,5 @@
+require 'pry'
+
 class Anagram
   attr_accessor :word, :possible_matches
 
@@ -9,6 +11,7 @@ class Anagram
     matches = []
     # split @word into letters
     word_letters = @word.split
+    binding.pry
     # iterate over possible matches
     possible_matches.each do |word|
       # split each word into letters

@@ -1,9 +1,10 @@
 class Anagram
   attr_accessor :word, :possible_matches
 
-  def initialize
+  def initialize(word)
+    @word = word
   end
 
-  def match
+  def match(possible_matches)
   end
 end

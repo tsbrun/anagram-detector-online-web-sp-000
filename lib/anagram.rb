@@ -7,8 +7,14 @@ class Anagram
 
   def match(possible_matches)
     # split @word into letters
+    matches = []
     word_letters = @word.split
     # iterate over possible matches
+    possible_matches.each do |word|
+      if word.split.sort == word_letters
+        word << matches
+      end
+    end
     # split each word into letters
     # sort letters
     # see if match

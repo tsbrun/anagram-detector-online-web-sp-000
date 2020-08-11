@@ -8,6 +8,7 @@ class Anagram
   def match(possible_matches)
     # split @word into letters
     matches = []
+    # split each word into letters
     word_letters = @word.split
     # iterate over possible matches
     possible_matches.each do |word|
@@ -15,11 +16,11 @@ class Anagram
         word << matches
       end
     end
-    # split each word into letters
     # sort letters
     # see if match
     # if yes, add to "matches" array
     # if no, move on to next word
     # return matches array
+    matches
   end
 end
